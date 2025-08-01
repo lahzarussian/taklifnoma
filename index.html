@@ -61,10 +61,21 @@
                 </div>
             </div>
             
-            <button class="rsvp" onclick="alert('Thank you for your RSVP! We look forward to seeing you at the grand opening!')">
+            <button class="rsvp" id="rsvpButton">
                 <i class="far fa-paper-plane"></i>
                 RSVP NOW
             </button>
+            
+            <div class="popup-overlay" id="rsvpPopup">
+                <div class="popup-content">
+                    <div class="popup-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Thank You!</h3>
+                    <p>Your RSVP has been received. We look forward to seeing you at our grand opening!</p>
+                    <button class="close-popup" id="closePopup">Close</button>
+                </div>
+            </div>
             
             <p class="note">
                 <i class="fas fa-gift"></i>
@@ -73,14 +84,6 @@
         </div>
     </div>
 
-    <script>
-        // Simple RSVP button interaction
-        // document.querySelector('.rsvp').addEventListener('click', function() {
-        //     alert('Thank you for your interest! Please call us at +1 (555) 123-4567 to confirm your attendance.');
-        // });
-        document.querySelector('.rsvp').addEventListener('click', function() {
-            alert('Thank you for your interest! Please call us at +1 (555) 123-4567 to confirm your attendance.');
-        });
-    </script>
+
 </body>
 </html>

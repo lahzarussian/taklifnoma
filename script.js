@@ -28,6 +28,39 @@ document.addEventListener('DOMContentLoaded', function() {
             top: invitationCard.offsetTop - 50,
             behavior: 'smooth'
         });
+
+        // Popup functionality
+        const rsvpButton = document.getElementById('rsvpButton');
+        const rsvpPopup = document.getElementById('rsvpPopup');
+        const closePopup = document.getElementById('closePopup');
+
+        // Show popup when RSVP button is clicked
+        rsvpButton.addEventListener('click', () => {
+            rsvpPopup.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when popup is open
+        });
+
+        // Close popup when close button is clicked
+        closePopup.addEventListener('click', () => {
+            rsvpPopup.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        });
+
+        // Close popup when clicking outside the popup content
+        rsvpPopup.addEventListener('click', (e) => {
+            if (e.target === rsvpPopup) {
+                rsvpPopup.classList.remove('active');
+                document.body.style.overflow = ''; // Re-enable scrolling
+            }
+        });
+
+        // Close popup when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && rsvpPopup.classList.contains('active')) {
+                rsvpPopup.classList.remove('active');
+                document.body.style.overflow = ''; // Re-enable scrolling
+            }
+        });
         
         // Trigger animations for header and food items
         setTimeout(() => {
