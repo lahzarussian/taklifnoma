@@ -632,3 +632,138 @@ h1 {
         padding: 25px;
     }
 }
+
+@media (max-width: 768px) {
+    .invitation-card {
+        margin: 10px;
+        border-width: 10px;
+    }
+    
+    .header-image img {
+        max-height: 200px;
+        object-fit: cover;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+        margin: 5px 0 10px;
+        padding: 0 15px;
+    }
+    
+    .subtitle {
+        font-size: 1.4rem;
+        margin: 0 0 10px;
+    }
+    
+    .event-title {
+        font-size: 1.6rem;
+        margin: 15px 0;
+        padding: 0 10px;
+    }
+    
+    .date, .time, .location {
+        font-size: 0.95rem;
+        margin: 15px 0;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 0 15px;
+    }
+    
+    .date i, .time i, .location i {
+        margin-right: 8px;
+    }
+    
+    .food-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px 0;
+        padding: 0 10px;
+    }
+    
+    .food-item {
+        width: calc(50% - 10px);
+        max-width: 160px;
+        margin: 0 0 10px 0;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .food-item i {
+        font-size: 1rem;
+    }
+    
+    .rsvp {
+        padding: 12px 30px;
+        font-size: 1rem;
+        margin: 10px 0 20px;
+    }
+    
+    .note {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+    
+    /* Popup adjustments for mobile */
+    .popup-content {
+        width: 90%;
+        padding: 20px;
+        margin: 0 10px;
+    }
+    
+    .popup-icon {
+        font-size: 2.5rem;
+    }
+    
+    .popup-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .popup-content p {
+        font-size: 0.95rem;
+        margin: 10px 0 20px;
+    }
+    
+    .close-popup {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    
+    /* Adjust intro number for mobile */
+    .intro-number {
+        font-size: 35vw;
+    }
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .event-title {
+        font-size: 1.4rem;
+    }
+    
+    .food-item {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .popup-content {
+        padding: 15px;
+    }
+    
+    .popup-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .popup-content p {
+        font-size: 0.9rem;
+    }
+}
