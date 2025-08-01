@@ -1,0 +1,241 @@
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes scaleIn { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+@keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+/* Intro Overlay */
+.intro-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeOut 0.5s ease-out 2s forwards;
+}
+
+.intro-number {
+    font-size: 15vw;
+    font-weight: 900;
+    color: white;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+}
+
+.header-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.6s ease-out 0.3s both;
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.header-image:hover img {
+    transform: scale(1.05);
+}
+
+.invitation-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin: 20px auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.invitation-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.6s ease-out 0.4s both;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #ffeb3b;
+    animation: fadeIn 0.6s ease-out 0.5s both;
+}
+
+.details {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    animation: fadeIn 0.6s ease-out 0.6s both;
+}
+
+.date, .time, .location {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.date i, .time i, .location i {
+    color: #ffeb3b;
+    width: 20px;
+}
+
+.highlight {
+    color: #ffeb3b;
+    font-weight: 600;
+}
+
+.food-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.food-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.food-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.food-item i {
+    color: #ffeb3b;
+    font-size: 1.2rem;
+}
+
+.rsvp {
+    background: #ffeb3b;
+    color: #333;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 20px 0;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 0.6s ease-out 0.7s both;
+}
+
+.rsvp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.note {
+    margin-top: 20px;
+    font-style: italic;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.note i {
+    color: #ffeb3b;
+}
+
+.invite-text {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}
+
+.event-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .header-image {
+        height: 150px;
+    }
+    
+    .food-items {
+        gap: 10px;
+    }
+    
+    .food-item {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .food-item i {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .subtitle {
+        font-size: 1.4rem;
+    }
+    .invitation-card {
+        padding: 25px;
+    }
+}
