@@ -21,61 +21,63 @@
                  onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=1800&q=80'"
                  alt="Delicious Shawarma">
         </div>
-        <h1>777</h1>
-        <h2 class="subtitle">Fast Food Center</h2>
-        <p class="invite-text">cordially invites you to our</p>
         
         <div class="details">
-            <h2 class="event-title">GRAND OPENING PARTY!</h2>
+            <h1>777</h1>
+            <h2 class="subtitle">Fast Food Center</h2>
+            <p class="invite-text">cordially invites you to our</p>
+            
+            <h2 class="event-title">GRAND OPENING</h2>
             
             <div class="date">
-                <i class="fas fa-calendar-alt"></i>
+                <i class="far fa-calendar-alt"></i>
                 <span class="highlight">Date:</span> Saturday, August 15th, 2025
             </div>
             <div class="time">
-                <i class="fas fa-clock"></i>
+                <i class="far fa-clock"></i>
                 <span class="highlight">Time:</span> 6:00 PM Onwards
             </div>
             <div class="location">
                 <i class="fas fa-map-marker-alt"></i>
-                <span class="highlight">Location:</span> 777 Food Street, Downtown
+                <span class="highlight">Location:</span> 123 Food Street, Culinary District
             </div>
+            
+            <div class="food-items">
+                <div class="food-item">
+                    <i class="fas fa-hamburger"></i>
+                    <span>Burgers</span>
+                </div>
+                <div class="food-item">
+                    <i class="fas fa-pizza-slice"></i>
+                    <span>Pizza</span>
+                </div>
+                <div class="food-item">
+                    <i class="fas fa-hotdog"></i>
+                    <span>Hot Dogs</span>
+                </div>
+                <div class="food-item">
+                    <i class="fas fa-ice-cream"></i>
+                    <span>Desserts</span>
+                </div>
+            </div>
+            
+            <button class="rsvp" onclick="alert('Thank you for your RSVP! We look forward to seeing you at the grand opening!')">
+                <i class="far fa-paper-plane"></i>
+                RSVP NOW
+            </button>
+            
+            <p class="note">
+                <i class="fas fa-gift"></i>
+                Special discounts for the first 50 guests!
+            </p>
         </div>
-
-        <p>Join us for an evening of delicious food, great music, and amazing company!</p>
-        
-        <div class="food-items">
-            <div class="food-item">
-                <i class="fas fa-hamburger"></i>
-                <span>Burgers</span>
-            </div>
-            <div class="food-item">
-                <i class="fas fa-pizza-slice"></i>
-                <span>Pizza</span>
-            </div>
-            <div class="food-item">
-                <i class="fas fa-hotdog"></i>
-                <span>Hot Dogs</span>
-            </div>
-            <div class="food-item">
-                <i class="fas fa-ice-cream"></i>
-                <span>Desserts</span>
-            </div>
-        </div>
-        
-        <button class="rsvp">
-            <i class="fas fa-utensils"></i>
-            RSVP NOW
-        </button>
-        
-        <p class="note">
-            <i class="fas fa-gift"></i>
-            Special discounts and freebies for the first 100 guests!
-        </p>
     </div>
 
     <script>
         // Simple RSVP button interaction
+        // document.querySelector('.rsvp').addEventListener('click', function() {
+        //     alert('Thank you for your interest! Please call us at +1 (555) 123-4567 to confirm your attendance.');
+        // });
         document.querySelector('.rsvp').addEventListener('click', function() {
             alert('Thank you for your interest! Please call us at +1 (555) 123-4567 to confirm your attendance.');
         });
